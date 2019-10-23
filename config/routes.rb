@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   get 'regulamin', to: "static#terms", as: :terms
   get 'polityka-prywatnosci', to: "static#privacy", as: :privacy
   get 'dostawa', to: "static#shipping", as: :shipping
