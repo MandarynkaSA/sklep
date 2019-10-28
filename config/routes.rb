@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
   
   namespace :admin do
-    get 'categories/index'
-    get 'categories/new'
-    get 'categories/edit'
+    resources :products
+    resources :categories
   end
-  namespace :admin do
-    get 'products/index'
-    get 'products/new'
-    get 'products/edit'
-  end
+
   get 'regulamin', to: "static#terms", as: :terms
   get 'polityka-prywatnosci', to: "static#privacy", as: :privacy
   get 'dostawa', to: "static#shipping", as: :shipping
