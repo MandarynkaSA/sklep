@@ -1,6 +1,6 @@
 class Admin::ProductsController < Admin::BaseController
     def index
-        @q = Product.page(params[:page]).per(30)
+        @products = Product.page(params[:page]).per(30)
     end
     
     def new
@@ -36,7 +36,7 @@ class Admin::ProductsController < Admin::BaseController
                                         :name,
                                         :category_id,
                                         :description,
-                                        :long_description,
+                                        :log_description,
                                         :price,
                                         :photo
                                         )

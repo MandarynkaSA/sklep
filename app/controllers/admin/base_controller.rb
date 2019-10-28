@@ -5,7 +5,7 @@ class Admin::BaseController < ApplicationController
 
     def authenticate
         authenticate_or_request_with_http_basic 'Podaj hasło!' do |name, password|
-            name == 'username' && password == 'secret'
+            name == 'username' && password == 'sekret'
         end
     end
 end
