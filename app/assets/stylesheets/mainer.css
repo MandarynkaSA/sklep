@@ -1,0 +1,46 @@
+:root {
+  /*colors*/
+  --main-color: #F6891A;
+  --basic-dark: #616161;
+  --basic-light: #dcdcdc;
+  --extra-color: #fdd735;
+  /*sizes*/
+  --main-width: 1192px;
+
+}
+
+body {
+  margin: 0;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+.categories__list, 
+.promo,
+.nav,
+.main {
+  width: var(--main-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+

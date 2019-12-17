@@ -33,6 +33,8 @@ gem 'ransack'
 gem 'kaminari'
 gem 'rails-i18n'
 gem 'statesman'
+gem 'clearance'
+
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

@@ -1,0 +1,248 @@
+.category-title {
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--basic-dark);
+}
+
+.description, .category-person__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-person {
+  width: 30%;
+}
+
+.category-person__avatar {
+  width: 30%;
+}
+
+.category-person__container {
+  border: 1px solid var(--basic-dark);
+  padding: 0 1em;
+}
+
+.category-person__avatar {
+  border: 1px solid var(--basic-dark);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 1em;
+  display: flex;
+}
+.category-person__avatar img {
+  margin: auto;
+}
+
+.article, .category-person__data {
+  width: 60%;
+}
+
+.category-person__name {
+  margin-bottom: 0.3em;
+  font-weight: normal;
+}
+
+.category-person__role {
+  color: var(--basic-dark);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.category-person__button {
+  margin: 1em 0;
+  cursor: pointer;
+  background-color: #fff;
+  border: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.category-person__button img {
+  max-width: 3em;
+}
+
+.category-person__button span {
+  padding-left: 1em;
+}
+
+.article__title {
+  text-transform: uppercase;
+  color: var(--basic-dark);
+}
+
+.article__subtitle {
+  border-bottom: 1px solid var(--basic-dark);
+  padding-bottom: 0.3em;
+  width: 300px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1em;
+  margin: 3em 0;
+}
+
+.product {
+  margin: 1em;
+}
+
+.product__figure {
+  display: flex;
+  flex-flow: column;
+  margin: 0;
+}
+
+.product__caption {
+  text-align: right;
+  color: var(--main-color);
+  font-weight: bold;
+  height: 2em;
+  padding: 0.5em;
+  background-color: rgba(255, 255, 255, 0.7);
+  margin-top: -2em;
+  font-size: 1.1em;
+}
+
+.product__title {
+  font-weight: bold;
+  color: var(--basic-dark);
+}
+
+.product__options {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--basic-light);
+}
+
+.product__button {
+  margin: 0 0 0 0.5em;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.4em;
+}
+
+.product__button--favourite { background-color: var(--extra-color); }
+.product__button--basket { background-color: var(--main-color); }
+
+
+.decoration {
+  display: flex;
+  height: 200px;
+  overflow: hidden;
+  margin: 1em 0;
+}
+
+.decoration__box {
+  width: 50%;
+}
+.decoration__box:first-child {
+  margin-right: 1em;
+}
+
+
+/* second design */
+
+.products--vertical {
+  margin: 4em 0;
+}
+
+.products--vertical__item {
+  display: flex;
+  height: 200px;
+  margin: 2em 0;
+}
+
+.products--vertical__figure {
+  width: 20%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.products--vertical__figure a {
+  height: 100%;
+}
+
+.products--vertical__img {
+  height: 100%;
+}
+
+.products--vertical__favourite {
+  width: 1em;
+  position: absolute;
+  top: 0;
+  right: 1em;
+}
+
+.products--vertical__description {
+  background-color: rgba(240, 240, 240, 0.7);
+  border: 1px solid var(--basic-light);
+  display: flex;
+  width: 80%;
+  padding: 1em;
+  height: 100%;
+}
+
+.products--vertical__description--left {
+  width: 65%;
+  margin-right: 1em;
+}
+
+.products--vertical__description--right {
+  width: 35%;
+}
+
+.products--vertical__info {
+  background-color: var(--main-color);
+  max-width: 200px;
+  padding: 0.5em;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8em;
+  margin-top: 0;
+}
+
+.products--vertical__title {
+  font-weight: bold;
+  font-size: 1.2em;
+  min-height: 3em;
+}
+
+.products--vertical__price {
+  font-size: 1.1em;
+  margin: 2.5em 0 0;
+}
+
+.products--vertical__price-info {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.products--vertical__post-info {
+  border: 1px solid var(--basic-light);
+  max-width: 160px;
+  padding: 0.3em;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #fff;
+  color: var(--basic-dark);
+}
+
+.products--vertical__basket-button {
+  border: 0;
+  background-color: var(--main-color);
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding: 1em;
+  cursor: pointer;
+  width: 100%;
+}

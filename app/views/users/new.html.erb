@@ -1,0 +1,28 @@
+<div id="clearance" class="sign-up">
+
+  <%= form_for @user do |form| %>
+
+  <main class="main--login">
+    <div class="login-container">
+      <a href="index.html">< powrót</a>
+      <div class="login-form">
+        <%= render partial: '/users/form', object: form %>
+          <div class="other-links">
+            <% if Clearance.configuration.allow_sign_up? %>
+              <p class="login-form__param">Masz już konto?  <%=link_to t("Zaloguj się"), sign_in_path, class: 'login-form__link' %></p>
+            <% end %>
+
+            <div class="login-form__button-container">
+              <button <%= form.submit class: 'login-form__button'%>Zarejestruj się</button>
+            </div>
+
+          </div>
+        <% end %>
+    </div>
+
+
+      </div>
+    </div>
+  </main>
+
+</div>

@@ -1,0 +1,27 @@
+<%= form_for :session, url: session_path do |form| %>
+<main class="main--login">
+  <div class="login-container">
+    <a href="index.html">< powrót</a>
+    <div class="login-form">
+      <%= image_tag("icons/logo_svg_orange.svg", alt: 'mandarynka logo', class: 'login-form__logo') %>
+      <h1 class="login-form__brand">Mandarynka</h1>
+      <h2 class="login-form__title">Zaloguj się</h2>
+        <input <%= form.text_field :email, type: 'email', placeholder: 'email', class: 'login-form__input'%>
+
+        <input <%= form.password_field :password, placeholder: 'hasło', class: 'login-form__input'%>
+
+        <div class="other-links">
+          <% if Clearance.configuration.allow_sign_up? %>
+            <p class="login-form__param">Nie masz jeszcze konta?  <%=link_to t("Zarejestruj się"), sign_up_path, class: 'login-form__link' %></p>
+          <% end %>
+
+          <div class="login-form__button-container">
+            <button <%= form.submit class: 'login-form__button'%>Zaloguj się</button>
+          </div>
+
+        </div>
+      <% end %>
+
+    </div>
+  </div>
+</main>
