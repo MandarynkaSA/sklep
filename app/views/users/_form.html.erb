@@ -1,0 +1,7 @@
+
+      <%= image_tag("icons/logo_svg_orange.svg", alt: 'mandarynka logo', class: 'login-form__logo') %>
+      <h1 class="login-form__brand">Mandarynka</h1>
+      <h2 class="login-form__title">Zarejestruj się</h2>
+        <input <%= form.text_field :email, type: 'email', placeholder: 'email', class: 'login-form__input'%>
+
+        <input <%= form.password_field :password, placeholder: 'hasło', class: 'login-form__input'%>

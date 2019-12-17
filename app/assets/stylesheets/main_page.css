@@ -13,10 +13,7 @@
  *= require_tree .
  *= require_self
  */
-require main
-require category
-require basket
-require send
-require slider
-require style
-require login
+
+ require mainer
+ require slider
+ require styles

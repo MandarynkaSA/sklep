@@ -1,11 +1,11 @@
 8.times do
     Category.create! name: Faker::Hacker.ingverb.capitalize
 end
-  
+
 category_ids = Category.pluck(:id)
-  
+
 print "Product "
-200.times do
+50.times do
     product = Product.create! name: "#{Faker::Hacker.verb} #{Faker::Hacker.noun}".capitalize,
         description: Faker::Hacker.say_something_smart,
         log_description: Faker::Lorem.paragraphs(number: 3).join("\n\n"),
