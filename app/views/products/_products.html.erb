@@ -1,23 +1,29 @@
-<% products.each_slice(3) do |slice| %>
-  <div class="row">
-    <% slice.each do |product| %>
-      <div class="col-md-4">
-        <div class="thumbnail">
-          <%= link_to product_path(product) do %>
-            <% image_tag product.photo.url(:thumb) %>
-          <% end %>
-          <div class="caption">
-            <h3><%= link_to product.name, product %></h3>
-            <p><%= simple_format(truncate(product.description, length: 90)) %></p>
-            <p class="lead"><%= number_to_currency product.price %></p>
-            <p>
-              <%= link_to "#", class: "btn btn-primary" do %>
-                <span class="fa fa-shopping-cart"></span> Dodaj do koszyka
-              <% end %>
-            </p>
-          </div>
-          </div>
-        </div>
-    <% end %>
-  </div>
-<% end %>
+
+   <div class="products--vertical">
+     <% products.each do |product| %>
+     <div class="products--vertical__item">
+       <figure class="products--vertical__figure">
+         <%= link_to product_path(product) do %>
+           <% image_tag product.photo.url %>
+         <% end %>
+       </figure>
+       <div class="products--vertical__description">
+         <div class="products--vertical__description--left">
+
+           <a <%= link_to product_path(product) do%><p class="products--vertical__title">
+              <%= product.name %></p><% end %></a>
+
+
+ <p><%= product.description %></p>
+         </div>
+         <div class="products--vertical__description--right">
+           <p class="products--vertical__price"><%= number_to_currency product.price %></p>
+
+           <%= link_to "#", class: "btn btn-primary" do %>
+             <span class="fa fa-shopping-cart"></span> Dodaj do koszyka
+           <% end %>
+         </div>
+       </div>
+     </div>
+     <% end %>
+   </div>
