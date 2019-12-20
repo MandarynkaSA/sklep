@@ -1,3 +1,53 @@
+<header class="header">
+<div class="nav">
+<div class="nav__logo">
+  <a href="/">
+    <%= image_tag("icons/logo_svg_orange.svg", alt: 'logo', class: 'nav__logo--img') %>
+    <span class="nav__logo--string">Mandarynka</span>
+  </a>
+</div>
+<div class="nav__search">
+  <input class="search__item--input" type="text" name="search" placeholder="Szukaj"> <!--dodaj tutaj lupkę-->
+  <button class="search__item--button" type="submit"><%= image_tag("icons/search.svg", alt: 'search', class: 'icon-img') %></button>
+</div>
+<div class="nav__menu menu">
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a><%= image_tag("icons/profile.svg", alt: 'profile') %></a>
+      <% if signed_in? %>
+        Witaj, <%= current_user.email %>!
+        <%= button_to 'Wyloguj', sign_out_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Zaloguj', sign_in_path %>
+        <% end %>
+    </li>
+    <li class="menu__item">
+      <%= link_to cart_path do %>
+      <%= image_tag("icons/basket.svg", alt: 'basket') %>
+        <span>Koszyk</span>
+      <%= current_cart.line_items.map { |e| e.quantity }.sum %>
+      produktów za
+      <%= number_to_currency(current_cart.line_items.map {|e| e.full_price}.sum) %>
+    <% end %>
+    </li>
+    <li class="menu__item">
+      <a href="#">
+        <%= image_tag("icons/phone.svg", alt: 'phone') %>
+        <span class="color-nr">784 927 392</span>
+      </a>
+    </li>
+  </ul>
+</div>
+</div>
+<div class="categories">
+<ul class="categories__list">
+  <% Category.all.each do |category| %>
+  <li class="categories__item">
+    <%= link_to category.name, category_path(category) %>
+  </li>
+  <% end %>
+</ul>
+</div>
 <div class="container-fluid">
   <div class="col-md-5">
     <h1><%= @product.name %></h1>
