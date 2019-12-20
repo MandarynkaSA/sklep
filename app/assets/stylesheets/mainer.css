@@ -1,6 +1,6 @@
 :root {
   /*colors*/
-  --main-color: #F6891A;
+  --main-color: #FFA07A;
   --basic-dark: #616161;
   --basic-light: #dcdcdc;
   --extra-color: #fdd735;
@@ -34,7 +34,7 @@ img {
   max-width: 100%;
 }
 
-.categories__list, 
+.categories__list,
 .promo,
 .nav,
 .main {
@@ -42,5 +42,3 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-
-
