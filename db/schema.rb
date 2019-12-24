@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_12_18_033920) do
     t.string "city"
     t.string "zip_code"
     t.string "street"
+    t.integer "ilosc_w_magazynie"
     t.integer "user_id", null: false
     t.integer "order_id", null: false
     t.datetime "created_at", precision: 6, null: false
